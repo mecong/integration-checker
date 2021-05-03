@@ -1,0 +1,15 @@
+version: '3.9'
+
+
+services:
+  postgres:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=password
+    hostname: postgres
+    ports:
+      - 5432:5432
+
+networks:
+  mynetwork:
+    driver: bridge

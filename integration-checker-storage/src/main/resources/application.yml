@@ -1,0 +1,17 @@
+spring:
+  application.name: integration-storage
+  liquibase.change-log: classpath:/db/changelog/db.changelog-master.xml
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    driver-class-name: org.postgresql.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    username: "postgres"
+    password: "password"
+    maximum-pool-size: 3
+    minimum-idle: 3
+    max-lifetime: 1_800_000
+    leak-detection-threshold: 0
+
+server:
+  port: 8080
+  servlet.context-path: /IntegrationStorage
